@@ -53,7 +53,7 @@ cron.schedule('* * * * *', () => {
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3001', // Adjust this to your frontend's origin
+    origin: process.env.CORS_ALLOWED_ORIGIN, // Adjust this to your frontend's origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
